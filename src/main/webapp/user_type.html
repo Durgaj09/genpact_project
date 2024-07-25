@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Select User Type</title>
+<style>
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f8ff;
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+p {
+	padding: 10px;
+	font-size: 24px;
+	color: #333;
+	text-align: center;
+}
+
+.container {
+	background:rgba(255,255,255,0.5);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 2.0);
+	border-radius: 8px;
+	overflow: hidden;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+button {
+	width: 150px;
+	height: 50px;
+	font-size: 16px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	margin: 20px 0;
+}
+
+button:hover {
+	background-color: #45a049;
+}
+
+button:focus {
+	outline: none;
+	box-shadow: 0 0 0 2px #4CAF50;
+}
+</style>
+</head>
+
+<body>
+	<div class="container">
+		<p><u>SELECT THE USER TYPE</u></p>
+		<button onClick="redirectToAdmin()" type="button" name="login_admin">Admin</button>
+		<button onClick="redirectToClient()" type="button" name="customer">Customer</button>
+	</div>
+	<script>
+		function redirectToClient() {
+			window.location.href = "login_Client.html";
+		}
+		function redirectToAdmin() {
+			window.location.href = "login_Admin.html";
+		}
+	</script>
+</body>
+
+</html>

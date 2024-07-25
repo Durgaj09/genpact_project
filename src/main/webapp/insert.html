@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Creating Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            flex-direction: column;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            box-sizing: border-box;
+            max-height: 80vh; /* Set maximum height for the container */
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        label {
+            font-size: 16px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        select,
+        textarea {
+            width: calc(100% - 20px); /* Adjust for padding */
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #4CAF50;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CUSTOMER DETAILS:</h1>
+        <form action="AdminInsert" method="POST">
+            <table>
+                <tr>
+                    <td><label for="name">Enter full name</label></td>
+                    <td><input type="text" id="name" name="name"></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Enter Address</label></td>
+                    <td><textarea id="address" name="address" rows="4" cols="50" placeholder="enter your address here...."></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="phno">Enter Mobile Number</label></td>
+                    <td><input type="tel" id="phno" name="phno"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Enter Email id</label></td>
+                    <td><input type="email" id="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="DOB">Enter Date of Birth</label></td>
+                    <td><input type="date" id="DOB" name="DOB" placeholder="dd/mm/yyyy"></td>
+                </tr>
+                <tr>
+                    <td><label for="idproof">Enter Id Proof</label></td>
+                    <td>
+                        <select name="idproof" id="idproof">
+                            <option value="none">select an option</option>
+                            <option value="aadhar">Aadhar Card</option>
+                            <option value="pan">Pan Card</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="idnumber">Id Number</label></td>
+                    <td><input type="number" id="idnumber" name="idnumber"></td>
+                </tr>
+                <tr>
+                    <td><label for="account">Enter account type</label></td>
+                    <td>
+                        <select name="account" id="account">
+                            <option value="None">select an option</option>
+                            <option value="saving">saving account</option>
+                            <option value="current">current account</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="balance">Enter Initial balance</label></td>
+                    <td><input type="text" id="balance" name="balance" placeholder="minimum 1000"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="button-group">
+                        <button type="submit">Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

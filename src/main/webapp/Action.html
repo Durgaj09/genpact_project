@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Admin Actions</title>
+<style>
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f8ff;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+h1 {
+	text-align: center;
+	color: #333;
+}
+
+.container {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px; /* Space between buttons */
+	align-items: center;
+	justify-content: center;
+	background-color: #e6f7ff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+}
+
+button {
+	width: 150px;
+	height: 50px;
+	font-size: 16px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: #45a049;
+}
+
+button:focus {
+	outline: none;
+	box-shadow: 0 0 0 2px #4CAF50;
+}
+</style>
+</head>
+
+<body>
+	<h1>Select the Action</h1>
+	<div class="container">
+		<button onClick="redirectToInsert()" name="insert">Insert</button>
+		<button onClick="redirectToDelete()" name="delete">Delete</button>
+		<button onClick="redirectToModify()" name="modify">Modify</button>
+		<button onClick="redirectToDetails()" name="details">Details</button>
+	</div>
+	<script>
+		function redirectToInsert() {
+			window.location.href = 'insert.html';
+		}
+		function redirectToDelete() {
+			window.location.href = 'delete.html';
+		}
+		function redirectToModify() {
+			window.location.href = "modify.html";
+		}
+		function redirectToDetails() {
+			window.location.href = "customerdetails.jsp";
+		}
+	</script>
+</body>
+
+</html>
